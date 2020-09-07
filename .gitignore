@@ -22,3 +22,4 @@ vqmod/mods.cache
 # Custom Ignores
 /.idea
 _assets/
+_db/

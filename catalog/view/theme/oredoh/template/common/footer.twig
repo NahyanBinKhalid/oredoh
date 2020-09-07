@@ -1,9 +1,30 @@
 <footer>
   <div class="container">
     <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-9">
+            <form id="subscription-form">
+              <input type="text" name="subscribe" value="" placeholder="Subscribe your email" class="form-control" />
+              <button class="btn btn-primary btn-block">Subscribe</button>
+              <p class="text text-info text-center">Subscribe And Get The Latest Promotions And Updates</p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div id="social-box" class="col-md-9">
+            <h3 class="text-center">Follow us and Keep in touch</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
       {% if informations %}
-      <div class="col-sm-3">
-        <h5>{{ text_information }}</h5>
+      <div class="col-sm-2">
+        <h4><strong>{{ text_information }}</strong></h4>
         <ul class="list-unstyled">
          {% for information in informations %}
           <li><a href="{{ information.href }}">{{ information.title }}</a></li>
@@ -11,35 +32,21 @@
         </ul>
       </div>
       {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
+      <div class="col-sm-2">
+        <h4><strong>{{ text_service }}</strong></h4>
         <ul class="list-unstyled">
           <li><a href="{{ contact }}">{{ text_contact }}</a></li>
           <li><a href="{{ return }}">{{ text_return }}</a></li>
           <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5>{{ text_extra }}</h5>
-        <ul class="list-unstyled">
           <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
-          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
-          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
-          <li><a href="{{ special }}">{{ text_special }}</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5>{{ text_account }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ account }}">{{ text_account }}</a></li>
-          <li><a href="{{ order }}">{{ text_order }}</a></li>
-          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
         </ul>
       </div>
     </div>
-    <hr>
-    <p>{{ powered }}</p>
+{#    <hr>#}
+    <div id="copyrights" class="text-center">
+      <p><i class="fa fa-heart"></i> Made With Love in Dubai <i class="fa fa-heart"></i></p>
+      <p>All rights reserved to Oredoh &copy; 2020</p>
+    </div>
   </div>
 </footer>
 {% for script in scripts %}
